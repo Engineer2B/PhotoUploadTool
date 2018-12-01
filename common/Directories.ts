@@ -24,7 +24,9 @@ export class Directories {
 	 */
 	public static LOGGING = path.join(path.parse(__dirname).root, 'Log', 'PhotoUploadTool');
 
-
+	/**
+	 *The data directory.
+	 */
 	public static DATA = path.resolve(__dirname, '..', 'data');
 
 	/**
@@ -44,11 +46,13 @@ export class Directories {
 
 	protected static dropbox: string;
 
-	public static DirPlusFileName(directory: string, fileName: string): string {
+	public static JoinPathStringsAndFileName(pathStrings: string[], fileName: string): string {
+		const directory = Directories.JoinPathStrings(pathStrings);
+
 		return path.join.apply(undefined, [directory].concat(fileName));
 	}
 
-	public static ProjectDirPlusPathStrings(pathStrings: string[]): string {
-		return path.join.apply(undefined, [Directories.PROJECT].concat(pathStrings));
+	public static JoinPathStrings(pathStrings: string[]): string {
+		return path.join.apply(undefined, pathStrings);
 	}
 }

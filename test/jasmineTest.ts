@@ -1,12 +1,13 @@
-import Jasmine = require("jasmine");
-import spec = require("jasmine-spec-reporter");
-import { JasmineConfiguration } from "./JasmineConfiguration";
-import * as util from "util";
+// tslint:disable-next-line:no-require-imports
+import Jasmine = require('jasmine');
+// tslint:disable-next-line:no-require-imports
+import spec = require('jasmine-spec-reporter');
+import { JasmineConfiguration } from './JasmineConfiguration';
 
 const argvObject = JasmineConfiguration.ParseArguments(process.argv);
 const jasmine = new Jasmine(argvObject);
 jasmine.loadConfig({
-	spec_dir: "test",
+	spec_dir: 'test',
 	spec_files: [
 		argvObject.SpecFiles
 	]
@@ -24,9 +25,9 @@ jasmine.env.addReporter(specReporter);
 
 jasmine.onComplete(passed => {
 	if (passed) {
-		console.log("All specs have passed");
+		console.log('All specs have passed');
 	} else {
-		console.log("At least one spec has failed");
+		console.log('At least one spec has failed');
 	}
 });
 

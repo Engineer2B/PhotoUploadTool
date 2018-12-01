@@ -1,15 +1,25 @@
 import { ReadWrite } from './ReadWrite';
 import { PackageJSON } from '../typings/common/package.json';
 import { Directories } from './Directories';
+import * as sharp from 'sharp';
 
 export class Settings {
 	public static get APPNAME(): string {
-		if (Settings.packageJSON === undefined) {
-			Settings.packageJSON = ReadWrite.ReadFromJSONFile<PackageJSON>(Directories.PROJECT, 'package.json');
+		if (Settings.package_JSON === undefined) {
+			Settings.package_JSON = ReadWrite.ReadFromJSONFile<PackageJSON>(Directories.PROJECT, 'package.json');
 		}
 
-		return Settings.packageJSON.name;
+		return Settings.package_JSON.name;
 	}
 
-	protected static packageJSON: PackageJSON;
+	public static get SHARP_SUPPORTED_EXTENSIONS(): string[] {
+		if (Settings.sharp_supported_extensions === undefined) {
+			Settings.sharp_supported_extensions = Object.keys(sharp.format).concat(['jpg']);
+		}
+
+		return Settings.sharp_supported_extensions;
+	}
+
+	protected static package_JSON: PackageJSON;
+	protected static sharp_supported_extensions: string[];
 }

@@ -5,11 +5,11 @@
 	"configurations": [
 		{
 			// Name of configuration; appears in the launch configuration drop down menu.
-			"name": "Run",
+			"name": "Compress images",
 			"type": "node",
 			"request": "launch",
 			// Workspace relative or absolute path to the program.
-			"program": "${workspaceRoot}\\src\\Main.js",
+			"program": "${workspaceRoot}/src/Entry/Compresser.js",
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
 			// Command line arguments passed to the program.
@@ -25,7 +25,8 @@
 				"NODE_ENV": "development"
 			},
 			// Use JavaScript source maps (if they exist).
-			"sourceMaps": true
+			"sourceMaps": true,
+			"console": "externalTerminal"
 		},
 		{
 			"type": "node",
@@ -35,7 +36,19 @@
 			"sourceMaps": true,
 			"showAsyncStacks": true,
 			"args": [
-				"spec_files=${workspaceRoot}\\test\\sharp\\*.test.js"
+				"spec_files=${workspaceRoot}/test/sharp/*.test.js"
+			],
+			"internalConsoleOptions": "openOnSessionStart"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Test common",
+			"program": "${workspaceRoot}/test/jasmineTest.js",
+			"sourceMaps": true,
+			"showAsyncStacks": true,
+			"args": [
+				"spec_files=${workspaceRoot}/test/common/*.test.js"
 			],
 			"internalConsoleOptions": "openOnSessionStart"
 		},
