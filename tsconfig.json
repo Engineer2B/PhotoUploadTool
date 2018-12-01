@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"sourceMap": true,
+		"module": "umd",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"common/**/*",
+		"typings/**/*",
+		"test/**/*"
+	],
+	"atom": {
+		"rewriteTsconfig": true
+	},
+	"plugins": [
+		{
+			"name": "tslint-language-service",
+			"alwaysShowRuleFailuresAsWarnings": true,
+			"ignoreDefinitionFiles": false,
+			"disableNoUnusedVariableRule": false
+		}
+	]
+}

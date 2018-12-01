@@ -1,0 +1,4 @@
+--timeout 150000
+--colors
+--debug-brk
+--ui tdd
