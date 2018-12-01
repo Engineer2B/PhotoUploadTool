@@ -4,6 +4,8 @@ import { Directories } from './Directories';
 import * as sharp from 'sharp';
 
 export class Settings {
+	public static SMALL_FILE_LIMIT = 750000;
+
 	public static get APPNAME(): string {
 		if (Settings.package_JSON === undefined) {
 			Settings.package_JSON = ReadWrite.ReadFromJSONFile<PackageJSON>(Directories.PROJECT, 'package.json');
