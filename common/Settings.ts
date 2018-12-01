@@ -7,7 +7,7 @@ import { UserJSON } from '../typings/common/user.json';
 export class Settings {
 	public static get USER(): UserJSON {
 		if (Settings.user === undefined) {
-			Settings.user = ReadWrite.ReadFromJSONFile<UserJSON>(Directories.PROJECT, 'user.json');
+			Settings.user = ReadWrite.ReadFromJSONFile<UserJSON>(Directories.PROJECT, 'user');
 		}
 
 		return Settings.user;
@@ -15,7 +15,7 @@ export class Settings {
 
 	public static get APPNAME(): string {
 		if (Settings.package_JSON === undefined) {
-			Settings.package_JSON = ReadWrite.ReadFromJSONFile<PackageJSON>(Directories.PROJECT, 'package.json');
+			Settings.package_JSON = ReadWrite.ReadFromJSONFile<PackageJSON>(Directories.PROJECT, 'package');
 		}
 
 		return Settings.package_JSON.name;
