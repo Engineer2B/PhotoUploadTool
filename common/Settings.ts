@@ -2,9 +2,16 @@ import { ReadWrite } from './ReadWrite';
 import { PackageJSON } from '../typings/common/package.json';
 import { Directories } from './Directories';
 import * as sharp from 'sharp';
+import { UserJSON } from '../typings/common/user.json';
 
 export class Settings {
-	public static SMALL_FILE_LIMIT = 750000;
+	public static get USER(): UserJSON {
+		if (Settings.user === undefined) {
+			Settings.user = ReadWrite.ReadFromJSONFile<UserJSON>(Directories.PROJECT, 'user.json');
+		}
+
+		return Settings.user;
+	}
 
 	public static get APPNAME(): string {
 		if (Settings.package_JSON === undefined) {
@@ -24,4 +31,5 @@ export class Settings {
 
 	protected static package_JSON: PackageJSON;
 	protected static sharp_supported_extensions: string[];
+	protected static user: UserJSON;
 }

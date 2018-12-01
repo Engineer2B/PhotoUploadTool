@@ -30,7 +30,7 @@ Prompt.AskForPath('where pictures are to be compressed', (pathName, folderName) 
 			const outFileName = Directories.JoinPathStringsAndFileName([outputPath], innerEntry);
 			const inFileName = Directories.JoinPathStringsAndFileName([entryPath], innerEntry);
 			const stats = fs.statSync(inFileName);
-			if (stats.size > Settings.SMALL_FILE_LIMIT) {
+			if (stats.size > Settings.USER.SmallFileLimit) {
 				sharp(inFileName)
 					.jpeg({
 						quality: 70
