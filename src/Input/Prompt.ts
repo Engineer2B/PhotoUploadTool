@@ -9,7 +9,7 @@ export class Prompt {
 	});
 
 	public static AskForPath(reason: string, callbackFn: (inPath: string, inFolder: string) => any): void {
-		Prompt.readLine.question(`Path where ${reason}:`, pathName => {
+		Prompt.readLine.question(`Path where ${reason}: `, pathName => {
 			if (!fs.existsSync(pathName)) {
 				Prompt.AskForPath(reason, callbackFn);
 			}

@@ -13,6 +13,7 @@
     "@types/jasminewd2": "^2.0.6",
     "@types/node": "^10.12.11",
     "@types/qs": "^6.5.1",
+    "cloudinary": "^1.13.2",
     "jasmine": "^3.3.0",
     "jasmine-core": "^3.3.0",
     "jasmine-spec-reporter": "^4.2.1",

@@ -6,6 +6,12 @@ import { Unit } from '../Unit';
 export class Timing {
 	private static setTimeoutPromise = util.promisify(setTimeout);
 
+	/**
+	 * Delay an action with retries for the given delay type.
+	 * @param {Delay} delay The delay.
+	 * @param {Function} retryAction The action that is performed.
+	 * @param {G | Exception} noRetryObject The object that is returned if the action was unsuccesful.
+	 */
 	public static async DelayWithAction<G>(delay: Delay, retryAction: (changedDelay) => Promise<G>, noRetryObject: G | Exception): Promise<G> {
 		if (delay.Retries > 0) {
 			await Timing.Delay(delay.Time);

@@ -29,6 +29,22 @@
 			"console": "externalTerminal"
 		},
 		{
+			"name": "Upload images",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/src/Entry/Uploader.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"runtimeExecutable": null,
+			"runtimeArgs": [],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"sourceMaps": true,
+			"console": "externalTerminal"
+		},
+		{
 			"type": "node",
 			"request": "launch",
 			"name": "Test Sharp",

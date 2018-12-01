@@ -13,7 +13,7 @@ sharp.queue.on('change', queueLength => {
 		process.exit(0);
 	}
 });
-Prompt.AskForPath('where pictures are to be compressed', (pathName, folderName) => {
+Prompt.AskForPath('from which pictures are to be compressed', (pathName, folderName) => {
 	const outputRoot = Directories.JoinPathStrings([pathName, '..', `${folderName}-compressed`]);
 	ReadWrite.MakeDirectory(outputRoot);
 	ReadWrite.ForAllFiles(pathName, pathName, (rootPath, entryPath, innerEntry) => {
