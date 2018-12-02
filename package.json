@@ -5,6 +5,7 @@
   "main": "src/Main.js",
   "dependencies": {
     "@types/sharp": "^0.21.0",
+    "nodegit": "^0.23.0",
     "qs": "^6.5.2",
     "sharp": "^0.21.0"
   },
