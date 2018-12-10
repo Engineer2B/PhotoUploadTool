@@ -4,7 +4,9 @@ export class Cloudinary {
 	public static Upload(fileName, folderName): Promise<any> {
 		return new Promise((resolve, reject) => {
 			cloudinary.v2.uploader.upload(fileName, {
-				folder: folderName
+				folder: folderName,
+				use_filename: true,
+				overwrite: false
 			},
 				(error, result) => {
 					if (error) {
