@@ -16,7 +16,7 @@
     "@types/qs": "^6.5.1",
     "cloudinary": "^1.22.0",
     "jasmine": "^3.3.0",
-    "jasmine-core": "^3.3.0",
+    "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-ts-console-reporter": "^3.1.1",
     "karma": "^3.1.1",
