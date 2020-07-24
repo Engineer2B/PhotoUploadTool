@@ -7,7 +7,7 @@
     "@types/sharp": "^0.21.0",
     "nodegit": "^0.26.5",
     "qs": "^6.9.4",
-    "sharp": "^0.21.0"
+    "sharp": "^0.25.4"
   },
   "devDependencies": {
     "@types/jasmine": "^3.3.0",
