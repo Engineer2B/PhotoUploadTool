@@ -1,0 +1,15 @@
+{
+	// See http://go.microsoft.com/fwlink/?LinkId=827846
+	// for the documentation about the extensions.json format
+	"recommendations": [
+			"waderyan.gitblame",
+			"dracula-theme.theme-dracula",
+			"coenraads.bracket-pair-colorizer-2",
+			"aaron-bond.better-comments",
+			"bcanzanella.openmatchingfiles",
+			"davidanson.vscode-markdownlint",
+			"ms-vscode.vscode-typescript-tslint-plugin",
+			"pmneo.tsimporter",
+			"pflannery.vscode-versionlens"
+	]
+}
