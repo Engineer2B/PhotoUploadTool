@@ -4,7 +4,7 @@
   "description": "Tool for manipulating and uploading photos.",
   "main": "src/Main.js",
   "dependencies": {
-    "@types/sharp": "^0.21.0",
+    "@types/sharp": "^0.25.1",
     "nodegit": "^0.26.5",
     "qs": "^6.9.4"
   },
