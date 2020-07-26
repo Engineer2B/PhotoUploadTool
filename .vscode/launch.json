@@ -2,8 +2,7 @@
 	"version": "0.1.0",
 	// List of configurations. Add new configurations or edit existing ones.
 	// ONLY "node" and "mono" are supported, change "type" to switch.
-	"configurations": [
-		{
+	"configurations": [{
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Compress images",
 			"type": "node",
@@ -45,10 +44,10 @@
 			"console": "externalTerminal"
 		},
 		{
-			"name": "Get all stuff",
+			"name": "Build an index of all resources on Cloudinary",
 			"type": "node",
 			"request": "launch",
-			"program": "${workspaceRoot}/src/Entry/Getter.js",
+			"program": "${workspaceRoot}/src/Entry/BuildResourcesIndex.js",
 			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}",
@@ -58,7 +57,39 @@
 				"NODE_ENV": "development"
 			},
 			"sourceMaps": true,
-			"console": "externalTerminal"
+			"console": "internalConsole"
+		},
+		{
+			"name": "Generate album posts",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/src/Entry/GenerateAlbumPosts.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"runtimeExecutable": null,
+			"runtimeArgs": [],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"sourceMaps": true,
+			"console": "internalConsole"
+		},
+		{
+			"name": "Move assets",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/src/Entry/MoveAssets.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"runtimeExecutable": null,
+			"runtimeArgs": [],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"sourceMaps": true,
+			"console": "internalConsole"
 		},
 		{
 			"type": "node",

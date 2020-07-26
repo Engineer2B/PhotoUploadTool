@@ -17,7 +17,7 @@ const specReporter = new spec.SpecReporter({
 	colors: {
 		enabled: true
 	},
-	spec: { displayStacktrace: true },
+	spec: { displayStacktrace: spec.StacktraceOption.PRETTY },
 	summary: { displayDuration: true },
 });
 

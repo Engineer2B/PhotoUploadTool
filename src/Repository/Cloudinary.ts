@@ -17,9 +17,10 @@ export class Cloudinary {
 				});
 		});
 	}
+
 	public static GetAllResources(nextCursor?): Promise<any> {
 		return new Promise((resolve, reject) => {
-			cloudinary.v2.api.resources({ nextCursor: nextCursor, max_results: 500 },
+			cloudinary.v2.api.resources({ next_cursor: nextCursor, max_results: 500 },
 				(error, result) => {
 					if (error) {
 						reject(error);

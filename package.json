@@ -6,8 +6,7 @@
   "dependencies": {
     "@types/sharp": "^0.21.0",
     "nodegit": "^0.26.5",
-    "qs": "^6.9.4",
-    "sharp": "^0.21.0"
+    "qs": "^6.9.4"
   },
   "devDependencies": {
     "@types/jasmine": "^3.3.0",
@@ -24,7 +23,8 @@
     "karma-cli": "^2.0.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "^2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2"
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "sharp": "^0.25.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

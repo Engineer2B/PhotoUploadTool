@@ -9,7 +9,7 @@ import { Cloudinary } from '../Repository/Cloudinary';
 import { WithRetries } from '../Action/WithRetries';
 import { EventEmitter } from 'events';
 
-cloudinary.config({
+cloudinary.v2.config({
 	cloud_name: Settings.USER.Cloudinary.CloudName,
 	api_key: Settings.USER.Cloudinary.Key,
 	api_secret: Settings.USER.Cloudinary.Secret

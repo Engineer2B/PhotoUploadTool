@@ -9,4 +9,5 @@ export interface UserJSON {
 			Retries: number
 		}
 	};
+	SitePath: string[];
 }
