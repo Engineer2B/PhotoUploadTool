@@ -16,7 +16,7 @@
     "cloudinary": "^1.23.0",
     "jasmine": "^3.6.1",
     "jasmine-core": "^3.6.0",
-    "jasmine-spec-reporter": "^5.0.2",
+    "jasmine-spec-reporter": "^6.0.0",
     "jasmine-ts-console-reporter": "^3.1.1",
     "karma": "^5.2.2",
     "karma-chrome-launcher": "^3.1.0",
