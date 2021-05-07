@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^3.7.0",
-    "@types/jasminewd2": "^2.0.8",
+    "@types/jasminewd2": "^2.0.9",
     "@types/node": "^15.0.1",
     "@types/qs": "^6.9.6",
     "cloudinary": "^1.25.1",
